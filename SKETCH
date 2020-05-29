@@ -1,0 +1,76 @@
+var tierra
+var anguloT=0;
+
+var sol
+var anguloS =0;
+
+var marte
+var anguloM =0;
+
+
+var jupiter
+var anguloJ=0;
+
+var luna
+var anguloL=0;
+
+
+
+function setup() {
+  createCanvas(1000,1000);
+  Sol = loadImage('sol.png');
+  Tierra = loadImage('tierra.png');
+  Jupiter = loadImage('jupiter.png');
+  marte = loadImage('marte.png');
+  Luna = loadImage('luna.png');
+}
+
+function draw() {
+  background(0);
+  
+  push();
+  translate(500,500);
+  rotate(anguloS);
+  scale(0.2);
+  imageMode(CENTER);
+  image(Sol,0,0);
+  anguloS = anguloS+0.01;
+  pop();
+  
+  push();
+  translate(500,500);
+  rotate(anguloT);
+  scale(0.2);
+  imageMode(CENTER);
+  image(Tierra,800,800);
+  anguloT = anguloT +0.010;
+  pop();
+  
+  push();
+  translate(400,400);
+  rotate(anguloJ);
+  scale(0.1,0.1);
+  imageMode(CENTER);
+  image(Jupiter,1700,1700);
+  anguloJ = anguloJ +0.01;
+  pop();
+  
+  push();
+  translate(500,500);
+  rotate(anguloM);
+  scale(0.1);
+  imageMode(CENTER);
+  image(marte,1000,1000);
+  anguloM = anguloM +0.02;
+  pop();
+  
+  push();
+  translate(500,500);
+  rotate(anguloL);
+  scale(0.1);
+  imageMode(CENTER);
+  image(Luna,800,800);
+  anguloL = anguloL +0.015;
+  pop();
+  
+}
